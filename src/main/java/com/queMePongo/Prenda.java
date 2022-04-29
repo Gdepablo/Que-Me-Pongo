@@ -10,8 +10,8 @@ public class Prenda
     Trama trama = Trama.LISA;
     Prenda borrador = null;
     
-      public void validarPrenda(Prenda prenda) {
-          if (prenda.tipoDePrenda == null || prenda.categoria == null || prenda.material == null || prenda.color == null || prenda.colorSecundario == null) {
+      public Prenda() {
+          if (tipoDePrenda == null || categoria == null || material == null || color == null || colorSecundario == null) {
                 throw new PrendaInvalida("La prenda es invalida");
           }
       }
