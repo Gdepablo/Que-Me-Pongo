@@ -1,0 +1,165 @@
+@entity
+@Table 
+public class Guardarropa{
+	   . . .                     
+}
+
+$ curl -XGET https://macowins-server.herokuapp.com/prendas/
+
+[
+  {
+    "id": 4,
+    "tipo": "pantalon",
+    "talle": 38
+  },
+  {
+    "id": 5,
+    "tipo": "pantalon",
+    "talle": 39
+  },
+  {
+    "id": 6,
+    "tipo": "pantalon",
+    "talle": 40
+  },
+  {
+    "id": 7,
+    "tipo": "pantalon",
+    "talle": 41
+  },
+  {
+    "id": 8,
+    "tipo": "pantalon",
+    "talle": 42
+  },
+  {
+    "id": 9,
+    "tipo": "pantalon",
+    "talle": 43
+  },
+  {
+    "id": 10,
+    "tipo": "pantalon",
+    "talle": 44
+  },
+  {
+    "id": 11,
+    "tipo": "remera",
+    "talle": "XS"
+  },
+  {
+    "id": 12,
+    "tipo": "remera",
+    "talle": "S"
+  },
+  {
+    "id": 13,
+    "tipo": "remera",
+    "talle": "M"
+  },
+  {
+    "id": 14,
+    "tipo": "remera",
+    "talle": "L"
+  },
+  {
+    "id": 15,
+    "tipo": "remera",
+    "talle": "XL"
+  },
+  {
+    "id": 16,
+    "tipo": "saco",
+    "talle": "XS"
+  },
+  {
+    "id": 17,
+    "tipo": "saco",
+    "talle": "S"
+  },
+  {
+    "id": 18,
+    "tipo": "saco",
+    "talle": "M",
+    "enStock": false
+  },
+  {
+    "id": 19,
+    "tipo": "saco",
+    "talle": "L"
+  },
+  {
+    "id": 20,
+    "tipo": "saco",
+    "talle": "XL"
+  },
+  {
+    "id": 21
+  },
+  {
+    "id": 22
+  },
+  {
+    "id": 23
+  }
+]
+
+
+
+Req 2)
+
+$ curl -XPOST 'https://macowins-server.herokuapp.com/prendas/' --data '{ "tipo": "remera", "talle": "S" }' -H 'Content-Type: application/json'
+{
+  "tipo": "remera",
+  "talle": "S",
+  "id": 26
+}
+
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Expires: -1
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Etag: W/"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk"
+Vary: Accept-Encoding
+Date: Fri, 30 Sep 2022 21:40:20 GMT
+Via: 1.1 vegur
+
+
+
+Req 3)
+	No entendí qué se pedía.
+Req 4)
+$ curl -XDELETE 'https://macowins-server.herokuapp.com/prendas/15'
+
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Expires: -1
+Content-Type: application/json; charset=utf-8
+Content-Length: 2
+Etag: W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"
+Vary: Accept-Encoding
+Date: Fri, 30 Sep 2022 21:42:21 GMT
+Via: 1.1 vegur
+
+
+Req 5) 
+$ curl -XGET 'https://macowins-server.herokuapp.com/eventos'
+{
+"id": 21
+}
+
+Debería devolver una lista de eventos pero no entiendo qué es un evento, no logré verlo en los enunciados anteriores del QMP.
+
+Req 6)
+$ curl -XGET 'https://macowins-server.herokuapp.com/prendas/sugerencias'
+{
+"evento": "???"
+}
+Va a devolver una lista de sugerencias de cierta prenda
+
+No sé si querían los mapeos, en todo caso sería agregar @Entity a las clases y, el automatico para que incremente la PK, o si era esto lo que se buscaba, ya que no terminé de entender bien el enunciado

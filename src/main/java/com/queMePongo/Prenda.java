@@ -2,6 +2,7 @@ package com.queMePongo;
 
 public class Prenda
 {
+    int id; 
     TipoDePrenda tipoDePrenda = null;
     Categoria categoria = null;
     Material material = null;
